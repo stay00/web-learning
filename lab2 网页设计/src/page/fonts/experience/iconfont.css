@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url("iconfont.ttf?t=1680079762767") format("truetype");
+}
+
+.icon-gongzuojingli:before {
+  content: "\e607";
+}

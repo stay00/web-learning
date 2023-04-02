@@ -1,0 +1,122 @@
+:root {
+	--xs: 4px;
+	--sm: 8px;
+	--md: 16px;
+	--lg: 24px;
+	--xl: 32px;
+	--header_color: pink;
+
+	/* --header_color: rgba(160, 218, 243, 0.5); */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	/* background-color: #6bb4b8; */
+	background-color: #eee;
+}
+
+main {
+	display: flex;
+	margin: var(--md);
+	height: 500px;
+	gap: 20px;
+	/* flex-wrap: wrap; */
+	/* align-items: flex-start; */
+}
+
+main .main-video-container {
+	width: 70%;
+	height: 100%;
+	padding: var(--md);
+	border-radius: var(--xs);
+	background-color: #fff;
+}
+
+main .main-video-container .main-video {
+	width: 100%;
+	height: 90%;
+	border-radius: var(--xs);
+}
+
+main .main-video-container .main-title {
+	font-size: var(--md);
+}
+
+main .video-list-container {
+	/* flex: 1 1 350px; */
+	width: 30%;
+	height: 100%;
+	border-radius: var(--xs);
+	overflow-y: scroll;
+	padding: var(--xs);
+	background-color: #fff;
+}
+
+main .video-list-container .list-item {
+	background-color: #eee;
+	display: flex;
+	align-items: center;
+	margin: var(--sm);
+	padding: var(--sm);
+	border-radius: var(--xs);
+}
+
+main .video-list-container .list-item .list-video {
+	width: 50%;
+	border-radius: var(--xs);
+}
+
+main .video-list-container .list-item .list-title {
+	font-size: var(--sm);
+}
+
+main .video-list-container .list-item.active {
+	background-color: #444;
+}
+
+main .video-list-container .list-item.active .list-title {
+	color: #fff;
+}
+
+main .video-list-container::-webkit-scrollbar {
+	width: var(--sm);
+}
+
+main .video-list-container::-webkit-scrollbar-track {
+	background-color: #fff;
+	border-radius: var(--xs);
+}
+
+main .video-list-container::-webkit-scrollbar-thumb {
+	background-color: #444;
+	border-radius: var(--xs);
+}
+
+header {
+	width: 100%;
+	height: 10%;
+	/* position: fixed; */
+	background-color: #fff;
+}
+header nav {
+	display: flex;
+	justify-content: space-between;
+	font-family: "Shadows Into Light", cursive;
+}
+header nav #logo {
+	color: pink;
+	font-size: var(--xl);
+	font-weight: bold;
+	margin-left: var(--lg);
+}

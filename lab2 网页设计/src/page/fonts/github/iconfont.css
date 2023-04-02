@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url("iconfont.ttf?t=1680061033596") format("truetype");
+}
+
+.icon-GitHub:before {
+  content: "\ea0a";
+}

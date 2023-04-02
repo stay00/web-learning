@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url("iconfont.ttf?t=1680064456310") format("truetype");
+}
+
+.icon-youxiang:before {
+  content: "\e72d";
+}

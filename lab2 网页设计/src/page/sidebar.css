@@ -1,0 +1,73 @@
+.sidebar {
+  --name-color: rgb(255, 255, 255);
+  --detail-color: rgba(200, 200, 200, 0.5);
+  --basic-color: rgba(220, 220, 220, 0.8);
+}
+
+.sidebar .iconfont {
+  font-family: "iconfont" !important;
+  font-size: var(--md);
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cover .sidebar {
+  flex-shrink: 0;
+  width: 33%;
+  height: 100%;
+  background-color: var(--theme);
+}
+
+.sidebar .name {
+  color: var(--name-color);
+  font-size: var(--lg);
+  margin: var(--md);
+}
+
+.sidebar .basic {
+  color: var(--basic-color);
+  font-size: var(--md);
+  margin: var(--md);
+}
+
+.sidebar .bio {
+  color: var(--detail-color);
+  margin: var(--md);
+}
+
+.sidebar .contact {
+  margin: var(--lg);
+  position: fixed;
+  bottom: 0;
+}
+.sidebar a:link,
+.sidebar a:visited,
+.sidebar a:active {
+  color: var(--basic-color);
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: var(--basic-color);
+  text-decoration: underline;
+}
+
+.contact .author {
+  color: var(--basic-color);
+  font-size: var(--sm);
+}
+
+.sidebar .profileContainer {
+  height: 100px;
+  width: 100%;
+  margin: var(--lg) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.profilePhoto {
+  width: auto;
+  height: 100%;
+  border-radius: 50%;
+  background-position: center;
+}

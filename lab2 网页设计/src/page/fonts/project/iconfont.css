@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url("iconfont.ttf?t=1680066125466") format("truetype");
+}
+
+.icon-code:before {
+  content: "\e615";
+}

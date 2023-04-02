@@ -1,0 +1,40 @@
+.content {
+  margin: var(--lg);
+}
+
+.content .iconfont {
+  font-family: "iconfont" !important;
+  font-size: var(--lg);
+  font-style: normal;
+  color: var(--theme);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content .info {
+  margin: var(--lg);
+}
+
+.content h1 {
+  color: black;
+  font-size: var(--lg);
+}
+.content .info1 {
+  color: black;
+  font-size: var(--md);
+}
+.content .info2 {
+  color: rgb(200, 200, 200);
+  font-size: var(--md);
+}
+
+.content .skills {
+  display: flex;
+}
+
+.skills .lang {
+  background-color: var(--theme);
+  color: white;
+  padding: var(--xs);
+  margin: var(--sm);
+}
