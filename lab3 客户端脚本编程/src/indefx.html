@@ -7,6 +7,9 @@
 		<title>IKUN TV</title>
 		<link rel="stylesheet" href="style.css" />
 		<link
+			rel="stylesheet"
+			href="../font/iconfont.css"
+			<link
 			href="https://fonts.googlefonts.cn/css?family=Shadows+Into+Light"
 			rel="stylesheet"
 		/>
@@ -22,9 +25,42 @@
 				<video
 					class="main-video"
 					src="../media/videos/《One_Last_Chicken》_再见了，所有的只因战士.mp4"
-					controls
 				></video>
-				<h3 class="main-title">《One_Last_Chicken》_再见了，所有的只因战士</h3>
+				<div class="video-controls">
+					<div class="play">
+						<button class="play-btn iconfont icon-bofang"></button>
+					</div>
+					<!-- <div class="progress"> -->
+					<progress class="progress-bar" min="0" value="0">
+						<!-- <span class="bar"></span> -->
+					</progress>
+					<!-- </div> -->
+					<div class="volume">
+						<button class="volume-btn iconfont icon-volume0"></button>
+						<input
+							class="volume-ctl"
+							type="range"
+							min="0"
+							value="0"
+							max="100"
+						/>
+					</div>
+					<div class="speed">
+						<button class="speed-btn">倍速</button>
+						<div class="options">
+							<div class="option-item" data-speed="2.0">2.0x</div>
+							<div class="option-item" data-speed="1.5">1.5x</div>
+							<div class="option-item" data-speed="1.25">1.25x</div>
+							<div class="option-item" data-speed="1.0">1.0x</div>
+							<div class="option-item" data-speed="0.75">0.75x</div>
+							<div class="option-item" data-speed="0.5">0.5x</div>
+						</div>
+					</div>
+					<div class="fullscreen">
+						<button class="full-btn iconfont icon-fullscreen"></button>
+					</div>
+				</div>
+				<h3 class="main-title">《One Last Chicken》再见了，所有的只因战士</h3>
 			</div>
 			<div class="video-list-container">
 				<div class="list-item active">
@@ -41,14 +77,14 @@
 						class="list-video"
 						src="../media/videos/你干嘛_原版.mp4"
 					></video>
-					<h3 class="list-title">你干嘛_原版</h3>
+					<h3 class="list-title">你干嘛 原版</h3>
 				</div>
 				<div class="list-item">
 					<video
 						class="list-video"
 						src="../media/videos/只因你太美（鸡你太美）原版.mp4"
 					></video>
-					<h3 class="list-title">只因你太美（鸡你太美）原版</h3>
+					<h3 class="list-title">只因你太美 原版</h3>
 				</div>
 				<div class="list-item">
 					<video
@@ -73,6 +109,61 @@
 				</div>
 			</div>
 		</main>
+		<div class="info-container">
+			<div class="description center-box">
+				<h3>Online User</h3>
+			</div>
+			<div class="profile-list" data-first="0">
+				<div class="arrow center-box">
+					<button class="arrow-btn iconfont icon-xiangzuo"></button>
+				</div>
+				<div class="profile-container active">
+					<div class="img-container">
+						<img src="../media/imgs/ruoy.jpg" />
+					</div>
+					<h3 class="uid">ruoy</h3>
+				</div>
+				<div class="profile-container active">
+					<div class="img-container">
+						<img src="../media/imgs/Haid.jpg" />
+					</div>
+					<h3 class="uid">haid</h3>
+				</div>
+				<div class="profile-container active">
+					<div class="img-container">
+						<img src="../media/imgs/Xiaom.jpg" />
+					</div>
+					<h3 class="uid">meng</h3>
+				</div>
+				<div class="profile-container active">
+					<div class="img-container">
+						<img src="../media/imgs/Boy.jpg" />
+					</div>
+					<h3 class="uid">boyi</h3>
+				</div>
+				<div class="profile-container active">
+					<div class="img-container">
+						<img src="../media/imgs/sb.jpg" />
+					</div>
+					<h3 class="uid">junj</h3>
+				</div>
+				<div class="profile-container">
+					<div class="img-container">
+						<img src="../media/imgs/lingy.jpg" />
+					</div>
+					<h3 class="uid">lyun</h3>
+				</div>
+				<div class="profile-container">
+					<div class="img-container">
+						<img src="../media/imgs/siy.jpg" />
+					</div>
+					<h3 class="uid">siy</h3>
+				</div>
+				<div class="arrow center-box">
+					<button class="arrow-btn iconfont icon-xiangyou"></button>
+				</div>
+			</div>
+		</div>
 		<!-- <video controls>
 			<source src="../media/videos/你干嘛_原版.mp4" type="video/mp4" />
 		</video> -->
