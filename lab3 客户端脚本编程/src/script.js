@@ -33,7 +33,7 @@ function swithVideo () {
     
     videoList.forEach((listItem)=>{
         listItem.addEventListener('click',()=>{chooseVideo(listItem)});
-    })
+    });
 }
 
 function videoControls() {
@@ -150,7 +150,7 @@ function videoControls() {
                 volume_btn.classList.replace('icon-volume1', 'icon-volume2');
 
         }
-    })
+    });
     document.addEventListener('keydown', (e) => {
         let step = 0.1;
         if (e.code === 'ArrowUp') 
@@ -166,7 +166,7 @@ function videoControls() {
 
         }
         volume_ctl.value = video.volume * 100;
-    })
+    });
 }
 
 function hoverBar() {
@@ -212,7 +212,14 @@ function userList() {
     let num = user_list.length;
     let arr = [];
     for (i = 0; i < user_list.length; i++) {
-        arr.push(user_list[i].querySelector("img").src);
+        let item = {
+            'src': '',
+            'uid': 0
+        };
+        item['src'] = user_list[i].querySelector("img").src;
+        item['uid'] = user_list[i].querySelector(".uid").innerHTML;
+        arr.push(item);
+        // arr.push(user_list[i].querySelector("img").src);
     }
     
     function setShow() {
@@ -220,7 +227,9 @@ function userList() {
         let first = Number(list_container.dataset.first);
         for(i = 0; i < show_num; i++) {
             let img = user_list[i].querySelector("img");
-            img.src = arr[(first + i) % num];
+            let id = user_list[i].querySelector(".uid");
+            img.src = arr[(first + i) % num]['src'];
+            id.innerHTML = arr[(first + i) % num]['uid'];
         }
     }
 
@@ -250,8 +259,10 @@ function userList() {
 //   });
 
 // video.addEventListener("loadedmetadata", initVideo);
-initVideo();
-swithVideo();
-videoControls();
-hoverBar();
-userList();
+window.onload = () => {
+    initVideo();
+    swithVideo();
+    videoControls();
+    hoverBar();
+    userList();
+}

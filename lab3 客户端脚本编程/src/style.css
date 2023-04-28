@@ -37,6 +37,7 @@ main {
 	height: 50vw;
 	width: 100%;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	/* justify-content: space-evenly; */
 	/* flex-wrap: wrap; */
 	/* align-items: flex-start; */
