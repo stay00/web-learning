@@ -1,0 +1,20 @@
+:root {
+	--xs: 4px;
+	--sm: 8px;
+	--md: 16px;
+	--lg: 24px;
+	--xl: 32px;
+	/* --header_color: rgba(160, 218, 243, 0.5); */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}

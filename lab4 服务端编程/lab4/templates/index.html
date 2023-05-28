@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Abstract TV</title>
+		<link rel="stylesheet" href="../static/style.css" />
+		<link rel="stylesheet" href="../static/font/iconfont.css" />
+		<link
+			href="https://fonts.googlefonts.cn/css?family=Shadows+Into+Light"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../static/header.css" />
+		<script src="../static/script.js" async></script>
+	</head>
+	<body>
+		<header id="nav-header">
+			<nav>
+				<div id="logo">
+					<a href="{{ url_for('player.index')}}">Abstract TV</a>
+					<!-- Abstract TV -->
+				</div>
+				<div class="link-container">
+					<span class="user-profile">{{ user }}</span>
+					<a href="{{ url_for('auth.logout') }}">登出</a>
+					<a href="{{ url_for('auth.signup') }}">注册</a>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div class="main-container">
+				<div class="main-video-container">
+					<!-- <video
+						class="main-video"
+						src="../static/media/videos/《One_Last_Chicken》_再见了，所有的只因战士.mp4"
+					></video> -->
+					<video class="main-video" src="{{ videos[0].src }}"></video>
+					<div class="video-controls">
+						<div class="play">
+							<button class="play-btn iconfont icon-bofang"></button>
+						</div>
+						<!-- <div class="progress"> -->
+						<progress class="progress-bar" min="0" value="0">
+							<!-- <span class="bar"></span> -->
+						</progress>
+						<!-- </div> -->
+						<div class="volume">
+							<button class="volume-btn iconfont icon-volume0"></button>
+							<input
+								class="volume-ctl"
+								type="range"
+								min="0"
+								value="0"
+								max="100"
+							/>
+						</div>
+						<div class="speed">
+							<button class="speed-btn">倍速</button>
+							<div class="options">
+								<div class="option-item" data-speed="2.0">2.0x</div>
+								<div class="option-item" data-speed="1.5">1.5x</div>
+								<div class="option-item" data-speed="1.25">1.25x</div>
+								<div class="option-item" data-speed="1.0">1.0x</div>
+								<div class="option-item" data-speed="0.75">0.75x</div>
+								<div class="option-item" data-speed="0.5">0.5x</div>
+							</div>
+						</div>
+						<div class="fullscreen">
+							<button class="full-btn iconfont icon-fullscreen"></button>
+						</div>
+					</div>
+					<!-- <h3 class="main-title">《One Last Chicken》再见了，所有的只因战士</h3> -->
+					<h3 class="main-title">{{ videos[0].name }}</h3>
+				</div>
+				<div class="video-list-container">
+					{% for video in videos %} {% if loop.first %}
+					<div class="list-item active">
+						<video class="list-video" src="{{ video.src }}"></video>
+						<h3 class="list-title">{{ video.name }}</h3>
+					</div>
+					{% else %}
+					<div class="list-item">
+						<video class="list-video" src="{{ video.src }}"></video>
+						<h3 class="list-title">{{ video.name }}</h3>
+					</div>
+					{% endif %} {% endfor %}
+					<!-- <div class="list-item active">
+						<video
+							class="list-video"
+							src="../static/media/videos/《One_Last_Chicken》_再见了，所有的只因战士.mp4"
+						></video>
+						<h3 class="list-title">
+							《One_Last_Chicken》_再见了，所有的只因战士
+						</h3>
+					</div> -->
+					<!-- <div class="list-item">
+						<video
+							class="list-video"
+							src="../static/media/videos/你干嘛_原版.mp4"
+						></video>
+						<h3 class="list-title">你干嘛 原版</h3>
+					</div>
+					<div class="list-item">
+						<video
+							class="list-video"
+							src="../static/media/videos/只因你太美（鸡你太美）原版.mp4"
+						></video>
+						<h3 class="list-title">只因你太美 原版</h3>
+					</div>
+					<div class="list-item">
+						<video
+							class="list-video"
+							src="../static/media/videos/只因你太美，但是团体版【J-wings】.mp4"
+						></video>
+						<h3 class="list-title">只因你太美，但是团体版【J-wings】</h3>
+					</div>
+					<div class="list-item">
+						<video
+							class="list-video"
+							src="../static/media/videos/一个真正的man原视频.mp4"
+						></video>
+						<h3 class="list-title">一个真正的man原视频</h3>
+					</div>
+					<div class="list-item">
+						<video
+							class="list-video"
+							src="../static/media/videos/阎王点名完整版.mp4"
+						></video>
+						<h3 class="list-title">阎王点名完整版</h3>
+					</div> -->
+				</div>
+			</div>
+			<div class="info-container">
+				<div class="description center-box">
+					<h3>Online iKun</h3>
+				</div>
+				<div class="profile-list" data-first="0">
+					<div class="arrow center-box">
+						<button class="arrow-btn iconfont icon-xiangzuo"></button>
+					</div>
+					<div class="profile-container active">
+						<div class="img-container">
+							<img src="../static/media/imgs/ruoy.jpg" />
+						</div>
+						<h3 class="uid">ruoy</h3>
+					</div>
+					<div class="profile-container active">
+						<div class="img-container">
+							<img src="../static/media/imgs/Haid.jpg" />
+						</div>
+						<h3 class="uid">haid</h3>
+					</div>
+					<div class="profile-container active">
+						<div class="img-container">
+							<img src="../static/media/imgs/Xiaom.jpg" />
+						</div>
+						<h3 class="uid">meng</h3>
+					</div>
+					<div class="profile-container active">
+						<div class="img-container">
+							<img src="../static/media/imgs/Boy.jpg" />
+						</div>
+						<h3 class="uid">boyi</h3>
+					</div>
+					<div class="profile-container active">
+						<div class="img-container">
+							<img src="../static/media/imgs/sb.jpg" />
+						</div>
+						<h3 class="uid">junj</h3>
+					</div>
+					<div class="profile-container">
+						<div class="img-container">
+							<img src="../static/media/imgs/lingy.jpg" />
+						</div>
+						<h3 class="uid">lyun</h3>
+					</div>
+					<div class="profile-container">
+						<div class="img-container">
+							<img src="../static/media/imgs/siy.jpg" />
+						</div>
+						<h3 class="uid">siy</h3>
+					</div>
+					<div class="arrow center-box">
+						<button class="arrow-btn iconfont icon-xiangyou"></button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- <video controls>
+			<source src="../static/media/videos/你干嘛_原版.mp4" type="video/mp4" />
+		</video> -->
+		<!-- <script src="./script.js"></script> -->
+	</body>
+</html>

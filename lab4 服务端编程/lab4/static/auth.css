@@ -1,0 +1,90 @@
+main {
+	height: 100%;
+	width: 100%;
+	/* background-color: aqua; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("./media/imgs/background.webp");
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(150, 150, 150, 0.5);
+	color: #eeeeee;
+	backdrop-filter: blur(8px);
+	box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+	border-radius: var(--sm);
+	padding: var(--xl);
+	min-width: 30vw;
+	/* padding-top: var(--xl); */
+	/* padding-bottom: var(--xl); */
+}
+
+.form-container form {
+	padding: var(--xl);
+	padding-bottom: 0px;
+	width: 100%;
+}
+
+input {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-item {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	min-height: var(--xl);
+}
+
+.button-container {
+	width: 100%;
+	display: flex;
+	padding: var(--sm);
+}
+
+#submit {
+	width: 100%;
+	background-color: transparent;
+	margin: var(--sm);
+	border-radius: var(--xs);
+}
+
+.signup-container {
+	font-family: "heiti";
+	/* border-color: aliceblue; */
+	/* border-style: solid; */
+}
+
+.signup-container a {
+	text-decoration: none;
+	color: #aaaaaa;
+}
+
+.signup-container a:hover {
+	text-decoration: underline;
+}
+
+form input {
+	border-radius: var(--xs);
+	border-style: none;
+}
+
+input::placeholder {
+	color: rgba(0, 0, 0, 0.8);
+	font-family: "Microsoft YaHei";
+}
+
+form .error {
+	color: #d95c5c;
+	min-height: var(--lg);
+}
+
+form .btn {
+	border-style: none;
+	background-color: rgba(110, 128, 110, 0.8);
+}

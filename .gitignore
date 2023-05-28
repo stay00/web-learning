@@ -1,0 +1,8 @@
+.gitignore
+.docx
+.doc
+.pdf
+*1953246*
+.idea
+__pycache__/
+.tmp

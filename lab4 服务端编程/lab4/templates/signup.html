@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Signup</title>
+		<link rel="stylesheet" href="../static/global.css" />
+		<link rel="stylesheet" href="../static/auth.css" />
+	</head>
+	<body>
+		<main>
+			<div class="form-container">
+				<h2>Abstract TV</h2>
+				<form method="POST" novalidate>
+					{{form.csrf_token}}
+					<div class="form-item">
+						<!-- <label for="username"></label> -->
+						<!-- <input id="username" placeholder="用户名" /> -->
+						{{form.username(placeholder="用户名")}}<br />
+						<!-- {{userid_error}} -->
+					</div>
+					<div class="error">
+						{% for message in form.username.errors %}
+						<small class="error">{{message}}</small>
+						{% endfor %}
+					</div>
+					<div class="form-item">
+						<!-- <label for="password"></label> -->
+						<!-- <input id="password" placeholder="密码" /> -->
+						{{form.password(placeholder="密码")}}<br />
+						<!-- {{password_error}} -->
+					</div>
+					<div class="error">
+						{% for message in form.password.errors %}
+						<small class="error">{{message}}</small>
+						{% endfor %}
+					</div>
+					<div class="form-item">
+						<!-- <label for="password2"></label> -->
+						<!-- <input id="password2" placeholder="确认密码" /> -->
+						{{form.password2(placeholder="确认密码")}}<br />
+						<!-- {{password_error}} -->
+					</div>
+					<div class="error">
+						{% for message in form.password2.errors %}
+						<small class="error">{{message}}</small>
+						{% endfor %}
+					</div>
+					<div class="form-item">
+						<input type="submit" value="Signup" class="btn" />
+						<!-- {{form.submit(class='btn')}} -->
+					</div>
+				</form>
+				<div class="signup-container">
+					<span>already have an account</span>
+					<a href="{{ url_for('auth.login') }}">Login</a>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

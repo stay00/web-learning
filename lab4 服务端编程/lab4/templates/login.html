@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="../static/global.css" />
+		<link rel="stylesheet" href="../static/auth.css" />
+		<script src="../static/login.js" async></script>
+	</head>
+	<body>
+		<main>
+			<div class="form-container">
+				<h2>Abstract TV</h2>
+				<form method="POST" novalidate>
+					{{form.csrf_token}}
+					<div class="form-item">
+						<!-- <label for="username"></label> -->
+						<!-- <input id="username" placeholder="用户名" /> -->
+						{{form.username(placeholder="用户名")}}<br />
+						<!-- {{userid_error}} -->
+					</div>
+					<div class="error">
+						{% for message in form.username.errors %}
+						<small class="error">{{ message }}</small>
+						{% endfor %}
+					</div>
+					<div class="form-item">
+						<!-- <label for="password"></label> -->
+						<!-- <input id="password" required type="password" placeholder="密码" /> -->
+						{{form.password(placeholder="密码")}}<br />
+						<!-- {{password_error}} -->
+					</div>
+					<div class="error">
+						{% for message in form.password.errors %}
+						<small class="error">{{ message }}</small>
+						{% endfor %} {% if match %}
+						<small class="error">{{ match }}</small>
+						{% endif %}
+					</div>
+					<div class="form-item">
+						<input type="submit" value="Log in" class="btn" />
+						<!-- {{form.submit(class='btn')}} -->
+					</div>
+				</form>
+				<div class="signup-container">
+					<span>Don't have an account</span>
+					<a href="{{ url_for('auth.signup') }}" class="jump-signup">
+						Sign&ensp;up
+					</a>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
